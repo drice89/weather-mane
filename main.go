@@ -10,5 +10,6 @@ func main() {
 	log.Println("INFO: Initializing program")
 
 	config.InitConfig()
+	// TODO loop get weather
 	services.GetWeather()
 }

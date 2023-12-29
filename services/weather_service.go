@@ -1,8 +1,8 @@
 package services
 
 import (
-	"os"
 	"log"
+	"os"
 
 	"github.com/lrosenman/ambient"
 )
@@ -16,7 +16,9 @@ func GetWeather() {
 	}
 
 	log.Printf("%v devices found", len(resp.DeviceRecord))
+
 	for _, item := range resp.DeviceRecord {
-		log.Printf( item.Macaddress, item.Info.Name)
+		// TODO Save field data to database
+		log.Println(item.LastDataFields)
 	}
 }
